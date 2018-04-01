@@ -3,8 +3,10 @@ run="/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper"
 
 $run begin
 
+# Remove all dns forwarding config so that new config can be laid down.
 $run delete service dns forwarding options
 
+# Add DNS tag for devices that require DNS proxying
 $run set service dns forwarding options dhcp-option=tag:USA,option:dns-server,169.53.182.120,169.54.78.85
 
 #Rokus
@@ -17,6 +19,7 @@ $run set service dns forwarding options address=/.duckduckgo.com/0.0.0.0
 $run set service dns forwarding options address=/.yahoo.com/0.0.0.0
 $run set service dns forwarding options address=/.snapchat.com/0.0.0.0
 
+# Forward all google search requests to safe search
 $run set service dns forwarding options address=/www.google.com/216.239.38.120
 $run set service dns forwarding options address=/www.google.ad/216.239.38.120
 $run set service dns forwarding options address=/www.google.ae/216.239.38.120
