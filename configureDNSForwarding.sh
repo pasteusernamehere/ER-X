@@ -14,6 +14,7 @@ $run set service dns forwarding options dhcp-option=tag:USA,option:dns-server,16
 $run set service dns forwarding options dhcp-mac=set:USA,c8:3a:6b:26:c8:76
 $run set service dns forwarding options dhcp-mac=set:USA,88:de:a9:bc:0b:31
 $run set service dns forwarding options dhcp-mac=set:USA,b8:3e:59:2a:95:15
+$run set service dns forwarding options dhcp-mac=set:USA,b0:ee:7b:f4:40:95
 
 $run set service dns forwarding options address=/.bing.com/204.79.197.220
 $run set service dns forwarding options address=/.duckduckgo.com/0.0.0.0
